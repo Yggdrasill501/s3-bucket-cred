@@ -5,4 +5,5 @@ docker run -d \
   -e AWS_SECRET_ACCESS_KEY=your_secret_key \
   -e S3_BUCKET=your_bucket_name \
   -e MOUNT_POINT=/mnt/s3 \
-  s3fs-container
+  -e CREDLIB_OPTS="LogLevel=Info,TokenPeriodSecond=3600" \
+  s3fs-awscred-container
